@@ -12,13 +12,13 @@ FetchContent_Declare(
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
-add_executable(google_test_sample src/main.cpp src/unit-1/code.h)
+add_executable(google_test_sample src/main.cpp src/unit-1/code.h src/unit-2/code.h)
 
 enable_testing()
 
 add_executable(
         google_test_sample_test
-        src/unit-1/code.h src/unit-1/code.test.cpp)
+        src/unit-1/code.h src/unit-1/code.test.cpp src/unit-2/code.h src/unit-2/code.test.cpp)
 target_link_libraries(
         google_test_sample_test
         gtest_main
